@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f4f8;
+    color: #334155;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator-container {
+    background: #ffffff;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.calculator-header {
+    background: #1e293b;
+    color: #ffffff;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.calculator-header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+.calculator-header p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 16px;
+}
+
+.calculator-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #475569;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #0f172a;
+    background: #f8fafc;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+.calc-btn {
+    width: 100%;
+    padding: 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.calc-btn:hover {
+    background: #1d4ed8;
+}
+
+.result-section {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.result-section h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.result-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.result-box:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.result-box.highlight {
+    background: #e0f2fe;
+    padding: 20px;
+    border-radius: 12px;
+    border-bottom: none;
+}
+
+.result-box.highlight .result-value {
+    color: #0369a1;
+    font-size: 28px;
+}
+
+.result-label {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.result-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Адаптивність для телефонів */
+@media (max-width: 768px) {
+    .calculator-body {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 30px;
+    }
+}
